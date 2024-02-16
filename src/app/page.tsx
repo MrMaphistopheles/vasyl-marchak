@@ -5,6 +5,8 @@ import Download from './_component/Download';
 
 
 
+
+
 const desc = "As an aspiring junior developer, I initiated a project to simplify loyalty system setup for small coffee shops. Beginning with React and Express, I transitioned to Next.js for server-side rendering, enhancing user experience. Recognizing the significance of type safety and maintainability, I expanded the project using the T3 stack. This experience has not only sharpened my technical skills but also intensified my commitment to delivering efficient and user-friendly solutions."
 const hobbies = "Engaging in street lifting and calisthenics keeps me in good physical shape. Additionally, I have a passion for drawing, and my primary hobby involves continuously learning new things. Currently, I am dedicating time to learning German as part of my ongoing pursuit of knowledge and personal development."
 const skils = [
@@ -61,7 +63,9 @@ export default async function Home() {
         <div className="flex sm:flex-col lg:flex-row lg:gap-10 sm:gap-3 w-full">
           <div className="w-24 sm:px-2">
             <p className="font-semibold text-gray-500 pt-1">
-              <TextDelay textDelayd="Details" timeout={11000}/>
+              <ComponentDelay delay={11000}>
+                  <TypingEffect text="Details"/>
+              </ComponentDelay>
             </p>
           </div>
 
@@ -96,7 +100,9 @@ export default async function Home() {
         <div className="flex sm:flex-col lg:flex-row lg:gap-10 sm:gap-3 w-full sm:px-2">
           <div className="w-24">
             <p className=" font-semibold text-gray-500 pt-1">
-              <TextDelay textDelayd="Skils" timeout={11000}/>
+             <ComponentDelay delay={11000}>
+                  <TypingEffect text="Skils"/>
+              </ComponentDelay>
             </p>
           </div>
          
@@ -107,7 +113,8 @@ export default async function Home() {
               {skils.map((i) => (
 
               <div className="flex gap-2" key={i.name}>
-              <CircularProgress  
+                 <ComponentDelay delay={500}>
+                 <CircularProgress  
                 aria-label="Loading..."
                 value={i.score}
                 classNames={{
@@ -116,6 +123,8 @@ export default async function Home() {
                   track: "stroke-black/10",
                   value: "text-sm font-semibold text-black",
                 }}/>
+                 </ComponentDelay>
+             
                 <p className="text-lg font-medium sm:text-md">
                 <TypingEffect text={i.name}/>
                 </p>
@@ -129,7 +138,9 @@ export default async function Home() {
         <div className="flex sm:flex-col lg:flex-row lg:gap-10 sm:gap-3 w-full sm:px-2">
           <div className="w-24">
             <p className=" font-semibold text-gray-500 pt-1">
-              <TextDelay textDelayd="Languages" timeout={11000}/>
+             <ComponentDelay delay={11000}>
+                  <TypingEffect text="Language"/>
+              </ComponentDelay>       
             </p>
           </div>
          
@@ -140,7 +151,8 @@ export default async function Home() {
               {languages.map((i) => (
 
               <div className="flex gap-2" key={i.name}>
-              <CircularProgress  
+                <ComponentDelay delay={500}>
+                <CircularProgress  
                 aria-label="Loading..."
                 value={i.score}
                 classNames={{
@@ -149,6 +161,8 @@ export default async function Home() {
                   track: "stroke-black/10",
                   value: "text-sm font-semibold text-black",
                 }}/>
+                </ComponentDelay>
+              
                 <p className="lg:text-lg font-medium sm:text-md">
                 <TypingEffect text={i.name}/>
                 </p>
@@ -161,13 +175,12 @@ export default async function Home() {
              </div>
 
         </div>
-
-
-{/* HOBBIES */}
         <div className="flex sm:flex-col lg:flex-row lg:gap-10 sm:gap-3 w-full ">
           <div className="w-24 sm:px-2">
             <p className=" font-semibold text-gray-500 pt-1">
-              <TextDelay textDelayd="Hobbies" timeout={11000}/>
+              <ComponentDelay delay={11000}>
+                  <TypingEffect text="Hobbies"/>
+              </ComponentDelay>
             </p>
           </div>
           <span
