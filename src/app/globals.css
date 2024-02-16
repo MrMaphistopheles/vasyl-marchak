@@ -58,10 +58,14 @@ body{
   }
 
   body {
-    font-size: 12pt; /* Adjust font size for print */
-    line-height: 1.5; /* Adjust line height for print */
+    font-size: 12pt !important;
+    line-height: 1.5 !important;
+    margin: 0 !important;
   }
 
+  header, footer {
+    display: none !important;
+  }
    metadata{
     display: none !important;
    }

@@ -1,6 +1,8 @@
-import { Avatar, CircularProgress } from "@nextui-org/react";
+import { Avatar, Button, CircularProgress } from "@nextui-org/react";
 import TypingEffect from './_component/Desc';
-import TextDelay from './_component/TextDelay';
+import TextDelay, { ComponentDelay } from './_component/TextDelay';
+import Download from './_component/Download';
+
 
 
 const desc = "As an aspiring junior developer, I initiated a project to simplify loyalty system setup for small coffee shops. Beginning with React and Express, I transitioned to Next.js for server-side rendering, enhancing user experience. Recognizing the significance of type safety and maintainability, I expanded the project using the T3 stack. This experience has not only sharpened my technical skills but also intensified my commitment to delivering efficient and user-friendly solutions."
@@ -174,8 +176,11 @@ export default async function Home() {
           </span>
         </div>
 
+        <ComponentDelay delay={11000}>
+            <Download/>
+        </ComponentDelay>
+              
        
-
     </div>
   );
 }
