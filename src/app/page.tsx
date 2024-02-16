@@ -1,6 +1,6 @@
 import { Avatar, Button, CircularProgress } from "@nextui-org/react";
 import TypingEffect from './_component/Desc';
-import TextDelay, { ComponentDelay } from './_component/TextDelay';
+import { ComponentDelay } from './_component/TextDelay';
 import Download from './_component/Download';
 
 
