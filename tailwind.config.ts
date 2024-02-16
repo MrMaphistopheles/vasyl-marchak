@@ -9,6 +9,13 @@ const config: Config = {
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
+    screens: {
+      sm: '200px',
+      md: '450px',
+      lg: '1024px',
+      xl: '1280px',
+
+    },
     extend: {
      
     },
