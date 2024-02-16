@@ -13,7 +13,7 @@ const hobbies = "Engaging in street lifting and calisthenics keeps me in good ph
 const projectDesc = "The project focuses on simplifying the setup process, requiring just a few clicks from the user. Notable features include online reviews and tips for baristas. The system functions as a Progressive Web App (PWA), offering consumers an app-like experience. Additionally, I have implemented a customisation feature, allowing managers to personalise the brand style for a cohesive appearance on customers' mobile devices. One of the project's key aspects is providing a cost-effective alternative to more expensive native apps."
 const skils = [
   {name: "Node.js", score: 70},
-  {name: "Git", score: 50},
+  {name: "Git", score: 60},
   {name: "HTML & CSS", score: 60},
   {name: "TypeScript", score: 72},
   {name: "Tailwind CSS", score: 50},
@@ -218,6 +218,7 @@ export default async function Home() {
 
 
         <ComponentDelay delay={11000}>
+          <div className="flex justify-center w-full pt-5">
           <Link href="https://github.com/MrMaphistopheles/loyalty-system" target="_blank">
               <Button className=" bg-black text-white ">
                 <svg className="w-6 h-6 text-white" 
@@ -232,6 +233,7 @@ export default async function Home() {
                 View code
               </Button>
             </Link>
+          </div>
         </ComponentDelay>    
         
     </div>
