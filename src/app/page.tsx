@@ -2,6 +2,7 @@ import { Avatar, Button, CircularProgress } from "@nextui-org/react";
 import TypingEffect from './_component/Desc';
 import { ComponentDelay } from './_component/TextDelay';
 import Download from './_component/Download';
+import Link from "next/link";
 
 
 
@@ -9,6 +10,7 @@ import Download from './_component/Download';
 
 const desc = "As an aspiring junior developer, I initiated a project to simplify loyalty system setup for small coffee shops. Beginning with React and Express, I transitioned to Next.js for server-side rendering, enhancing user experience. Recognizing the significance of type safety and maintainability, I expanded the project using the T3 stack. This experience has not only sharpened my technical skills but also intensified my commitment to delivering efficient and user-friendly solutions."
 const hobbies = "Engaging in street lifting and calisthenics keeps me in good physical shape. Additionally, I have a passion for drawing, and my primary hobby involves continuously learning new things. Currently, I am dedicating time to learning German as part of my ongoing pursuit of knowledge and personal development."
+const projectDesc = "The project focuses on simplifying the setup process, requiring just a few clicks from the user. Notable features include online reviews and tips for baristas. The system functions as a Progressive Web App (PWA), offering consumers an app-like experience. Additionally, I have implemented a customisation feature, allowing managers to personalise the brand style for a cohesive appearance on customers' mobile devices. One of the project's key aspects is providing a cost-effective alternative to more expensive native apps."
 const skils = [
   {name: "Node.js", score: 70},
   {name: "Git", score: 50},
@@ -166,7 +168,7 @@ export default async function Home() {
                 <p className="lg:text-lg font-medium sm:text-md">
                 <TypingEffect text={i.name}/>
                 </p>
-                <p className="lg:text-lg font-normal sm:text-md">
+                <p className="lg:text-lg font-light sm:text-md">
                 <TypingEffect text={i.level}/>
                 </p>
               </div>
@@ -175,6 +177,7 @@ export default async function Home() {
              </div>
 
         </div>
+
         <div className="flex sm:flex-col lg:flex-row lg:gap-10 sm:gap-3 w-full ">
           <div className="w-24 sm:px-2">
             <p className=" font-semibold text-gray-500 pt-1">
@@ -192,9 +195,39 @@ export default async function Home() {
         <ComponentDelay delay={11000}>
             <Download/>
         </ComponentDelay>
-              
-       
+
+        <div className="flex sm:flex-col lg:flex-row lg:gap-10 sm:gap-3 w-full ">
+          <div className="w-24 sm:px-2">
+            <p className=" font-semibold text-gray-500 pt-1">
+              <ComponentDelay delay={11000}>
+                  <TypingEffect text="Current Project"/>
+              </ComponentDelay>
+            </p>
+          </div>
+          <span
+          className="w-[80%] lg:px-8 lg:text-lg font-normal sm:px-2 sm:w-full sm:text-md">
+            <TypingEffect text={projectDesc}/>
+          </span>
+        </div>
+
+
+        <ComponentDelay delay={11000}>
+          <Link href="https://github.com/MrMaphistopheles/loyalty-system" target="_blank">
+              <Button className=" bg-black text-white ">
+                <svg className="w-6 h-6 text-white" 
+                  aria-hidden="true" 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  fill="currentColor" 
+                  viewBox="0 0 24 24">
+                  <path fillRule="evenodd" 
+                  d="M12 2c-2.4 0-4.7.9-6.5 2.4a10.5 10.5 0 0 0-2 13.1A10 10 0 0 0 8.7 22c.5 0 .7-.2.7-.5v-2c-2.8.7-3.4-1.1-3.4-1.1-.1-.6-.5-1.2-1-1.5-1-.7 0-.7 0-.7a2 2 0 0 1 1.5 1.1 2.2 2.2 0 0 0 1.3 1 2 2 0 0 0 1.6-.1c0-.6.3-1 .7-1.4-2.2-.3-4.6-1.2-4.6-5 0-1.1.4-2 1-2.8a4 4 0 0 1 .2-2.7s.8-.3 2.7 1c1.6-.5 3.4-.5 5 0 2-1.3 2.8-1 2.8-1 .3.8.4 1.8 0 2.7a4 4 0 0 1 1 2.7c0 4-2.3 4.8-4.5 5a2.5 2.5 0 0 1 .7 2v2.8c0 .3.2.6.7.5a10 10 0 0 0 5.4-4.4 10.5 10.5 0 0 0-2.1-13.2A9.8 9.8 0 0 0 12 2Z" 
+                  clipRule="evenodd"/>
+                </svg>
+                View code
+              </Button>
+            </Link>
+        </ComponentDelay>    
+        
     </div>
   );
 }
-
