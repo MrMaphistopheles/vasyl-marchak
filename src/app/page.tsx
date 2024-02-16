@@ -44,7 +44,13 @@ export default async function Home() {
               <TypingEffect text="Lviv, Ukraine"/>
             </p>
             <p className="lg:text-md font-light text-gray-500 sm:text-sm">
-            <TypingEffect text="+380639346667 · basylmarchak@icloud.com"/>
+              <Link href="tel:+380639346667">
+              <TypingEffect text="+380639346667 "/>
+              </Link>
+              <Link href="mailto:basylmarchak@icloud.com">
+              <TypingEffect text="basylmarchak@icloud.com"/>
+              </Link>
+           
              </p>
             </div>
             <span className="lg:text-3xl font-bold sm:text-xl">
