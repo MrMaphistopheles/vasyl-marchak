@@ -1,9 +1,9 @@
-import { Button, CircularProgress } from "@nextui-org/react";
+import { Avatar, Button, CircularProgress } from "@nextui-org/react";
 import TypingEffect from './_component/Desc';
 import { ComponentDelay } from './_component/TextDelay';
 import Download from './_component/Download';
 import Link from "next/link";
-import Avatar from "./_component/Avatar";
+
 
 
 
@@ -38,7 +38,7 @@ export default async function Home() {
     <div className="max-w-[50em] w-full flex flex-col items-center justify-start py-16 sm:px-3 lg:gap-5 sm:gap-3 overflow-scroll hide-scroll ">
 
         <div className="flex w-full lg:gap-10 sm:gap-4">
-          <Avatar link="https://storage.googleapis.com/bonuslite1/avatar.jpeg" size={24}/>
+          <Avatar src="https://storage.googleapis.com/bonuslite1/avatar.jpeg" className="w-24 h-24"/>
 
 
           <div className="flex flex-col items-start justify-between lg:pl-8 sm:pl-2 sm:w-[60%] lg:w-[70%]">
@@ -241,3 +241,5 @@ export default async function Home() {
     </div>
   );
 }
+
+
