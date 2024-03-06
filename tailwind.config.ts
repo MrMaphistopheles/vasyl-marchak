@@ -17,7 +17,23 @@ const config: Config = {
 
     },
     extend: {
-     
+      animation: {
+        tscale: "scale 1s linear infinite",
+      },
+      keyframes: {
+        scale: {
+          "0-50%": {
+            transform: "scale(1)",
+          },
+          "50%": {
+            transform: "scale(1.03)",
+          },
+          "100%": {
+            transform: "scale(1)",
+          },
+        },
+      },
+      
     },
   },
   darkMode: "class",

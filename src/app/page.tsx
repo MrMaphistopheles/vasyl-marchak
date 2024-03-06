@@ -56,9 +56,13 @@ const languages = [
   {name: "English", score: 50, level: "Good working knowledge"},
 ]
 
+const delay = async (ms: number) => {
+  return new Promise((resolve) => setTimeout(resolve, ms))
+}
+
 export default async function Home() {
 
- 
+  await delay(2000)
   return (
     <div className="max-w-[50em] w-full flex flex-col items-center justify-start py-16 sm:px-3 lg:gap-5 sm:gap-3 overflow-scroll hide-scroll ">
 
