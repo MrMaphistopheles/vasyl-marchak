@@ -10,21 +10,46 @@ import Link from "next/link";
 
 
 
-const desc = "As an aspiring junior developer, I initiated a project to simplify loyalty system setup for small coffee shops. Beginning with React and Express, I transitioned to Next.js for server-side rendering, enhancing user experience. Recognizing the significance of type safety and maintainability, I expanded the project using the T3 stack. This experience has not only sharpened my technical skills but also intensified my commitment to delivering efficient and user-friendly solutions."
+const desc = "Over the past three years, I frequented a small coffee bar where the paper card loyalty system irked me. This annoyance sparked the idea to create a simple browser-based loyalty system. Implementing the concept proved more challenging than expected, requiring several weeks of dedicated effort. This endeavor propelled me to delve into understanding web development through building various small projects."
 const hobbies = "Engaging in street lifting and calisthenics keeps me in good physical shape. Additionally, I have a passion for drawing, and my primary hobby involves continuously learning new things. Currently, I am dedicating time to learning German as part of my ongoing pursuit of knowledge and personal development."
-const projectDesc = "The project focuses on simplifying the setup process, requiring just a few clicks from the user. Notable features include online reviews and tips for baristas. The system functions as a Progressive Web App (PWA), offering consumers an app-like experience. Additionally, I have implemented a customisation feature, allowing managers to personalise the brand style for a cohesive appearance on customers' mobile devices. One of the project's key aspects is providing a cost-effective alternative to more expensive native apps."
+const projectDesc = "The project focuses on simplifying the setup of a loyalty system, requiring just a few clicks from the user. Notable features include online reviews and tips for baristas. The system functions as a Progressive Web App (PWA), offering consumers an app-like experience. Additionally, I have implemented a customization feature, allowing managers to personalize the brand style for a cohesive appearance on customers' mobile devices. One of the project's key aspects is providing a cost-effective alternative to more expensive native apps."
+const wordsProject = "The primary goal of this project is to develop a Progressive Web App (PWA) for engaging vocabulary learning using a 'repeating' method. Additionally, a Chrome extension will capture new words from Netflix and YouTube, creating personalized vocabulary lists. The aim is to simplify language learning through active engagement with real-world content and systematic reinforcement."
 const skils = [
   {name: "Node.js", score: 70},
   {name: "Git", score: 60},
   {name: "HTML & CSS", score: 60},
-  {name: "TypeScript", score: 72},
+  {name: "TypeScript", score: 65},
   {name: "Tailwind CSS", score: 50},
   {name: "SQL", score: 54},
-  {name: "Javascript", score: 80},
+  {name: "Javascript", score: 75},
   {name: "React.js", score: 79},
   {name: "Prisma ORM", score: 60},
   {name: "Next.js", score: 60},
 ]
+
+const projectTechStak = [
+  {name: "TypeScript", score: 65},
+  {name: "Tailwind CSS", score: 50},
+  {name: "React.js", score: 79},
+  {name: "Prisma ORM", score: 60},
+  {name: "Next.js", score: 60},
+  {name: "Tanstack/React-Query", score: 60},
+  {name: "Trpc", score: 60},
+  {name: "NextUI", score: 60},
+]
+
+const wordsProejectTechStak = [
+  {name: "TypeScript", score: 65},
+  {name: "Tailwind CSS", score: 50},
+  {name: "React.js", score: 79},
+  {name: "Prisma ORM", score: 60},
+  {name: "Next.js", score: 60},
+  {name: "Tanstack/React-Query", score: 60},
+  {name: "Trpc", score: 60},
+  {name: "Google Text to Speach API", score: 60},
+  {name: "NextUI", score: 60},
+]
+
 
 const languages = [
   {name: "Ukranian", score: 100, level: "Native speaker"},
@@ -53,6 +78,9 @@ export default async function Home() {
               <Link href="mailto:basylmarchak@icloud.com">
               <TypingEffect text="basylmarchak@icloud.com"/>
               </Link>
+  {/*             <Link href=" https://vasylmarchak.com" target="_blank">
+              <TypingEffect text=" https://vasylmarchak.com"/>
+              </Link> */}
            
              </p>
             </div>
@@ -73,7 +101,7 @@ export default async function Home() {
 
         <div className="flex sm:flex-col lg:flex-row lg:gap-10 sm:gap-3 w-full">
           <div className="w-24 sm:px-2">
-            <p className="font-semibold text-gray-500 pt-1">
+            <p className="font-semibold text-gray-600 pt-1">
               <ComponentDelay delay={11000}>
                   <TypingEffect text="Details"/>
               </ComponentDelay>
@@ -110,7 +138,7 @@ export default async function Home() {
 
         <div className="flex sm:flex-col lg:flex-row lg:gap-10 sm:gap-3 w-full sm:px-2">
           <div className="w-24">
-            <p className=" font-semibold text-gray-500 pt-1">
+            <p className=" font-semibold text-gray-600 pt-1">
              <ComponentDelay delay={11000}>
                   <TypingEffect text="Skils"/>
               </ComponentDelay>
@@ -148,7 +176,7 @@ export default async function Home() {
 
         <div className="flex sm:flex-col lg:flex-row lg:gap-10 sm:gap-3 w-full sm:px-2">
           <div className="w-24">
-            <p className=" font-semibold text-gray-500 pt-1">
+            <p className=" font-semibold text-gray-600 pt-1">
              <ComponentDelay delay={11000}>
                   <TypingEffect text="Language"/>
               </ComponentDelay>       
@@ -189,7 +217,7 @@ export default async function Home() {
 
         <div className="flex sm:flex-col lg:flex-row lg:gap-10 sm:gap-3 w-full ">
           <div className="w-24 sm:px-2">
-            <p className=" font-semibold text-gray-500 pt-1">
+            <p className=" font-semibold text-gray-600 pt-1">
               <ComponentDelay delay={11000}>
                   <TypingEffect text="Hobbies"/>
               </ComponentDelay>
@@ -205,9 +233,9 @@ export default async function Home() {
             <Download/>
         </ComponentDelay>
 
-        <div className="flex sm:flex-col lg:flex-row lg:gap-10 sm:gap-3 w-full ">
+       <div className="flex sm:flex-col lg:flex-row lg:gap-10 sm:gap-3 w-full ">
           <div className="w-24 sm:px-2">
-            <p className=" font-semibold text-gray-500 pt-1">
+            <p className=" font-semibold text-gray-600 pt-1">
               <ComponentDelay delay={11000}>
                   <TypingEffect text="Current Project"/>
               </ComponentDelay>
@@ -218,26 +246,107 @@ export default async function Home() {
             <TypingEffect text={projectDesc}/>
           </span>
         </div>
+        
+
+        <div className="flex sm:flex-col lg:flex-row lg:gap-10 sm:gap-3 w-full ">
+          <div className="w-24 sm:px-2"/>
+          <div className="w-[80%] lg:px-8 lg:text-lg font-normal sm:px-2 sm:w-full sm:text-md">
+          <ComponentDelay delay={11000}>
+          <p className="font-medium text-md text-black pb-2">
+                  <TypingEffect text="Core Technology"/>
+          </p>
+          </ComponentDelay>
+           <ComponentDelay delay={11000}>
+            <div className="flex w-full gap-2 flex-wrap">
+            {projectTechStak.map((i) => (
+                  <Button className="cursor-default bg-white text-black" size="sm" key={i.name}>{i.name}</Button>
+                ))}
+            </div>
+           </ComponentDelay>
+          </div>
+        </div>
 
 
         <ComponentDelay delay={11000}>
-          <div className="flex justify-center w-full pt-5">
-          <Link href="https://github.com/MrMaphistopheles/loyalty-system" target="_blank">
+          <div className="flex justify-center w-full pt-5 gap-3">
+            <Link href="https://lite-theta.vercel.app/about" target="_blank">
               <Button className=" bg-black text-white ">
-                <svg className="w-6 h-6 text-white" 
-                  aria-hidden="true" 
-                  xmlns="http://www.w3.org/2000/svg" 
-                  fill="currentColor" 
-                  viewBox="0 0 24 24">
-                  <path fillRule="evenodd" 
-                  d="M12 2c-2.4 0-4.7.9-6.5 2.4a10.5 10.5 0 0 0-2 13.1A10 10 0 0 0 8.7 22c.5 0 .7-.2.7-.5v-2c-2.8.7-3.4-1.1-3.4-1.1-.1-.6-.5-1.2-1-1.5-1-.7 0-.7 0-.7a2 2 0 0 1 1.5 1.1 2.2 2.2 0 0 0 1.3 1 2 2 0 0 0 1.6-.1c0-.6.3-1 .7-1.4-2.2-.3-4.6-1.2-4.6-5 0-1.1.4-2 1-2.8a4 4 0 0 1 .2-2.7s.8-.3 2.7 1c1.6-.5 3.4-.5 5 0 2-1.3 2.8-1 2.8-1 .3.8.4 1.8 0 2.7a4 4 0 0 1 1 2.7c0 4-2.3 4.8-4.5 5a2.5 2.5 0 0 1 .7 2v2.8c0 .3.2.6.7.5a10 10 0 0 0 5.4-4.4 10.5 10.5 0 0 0-2.1-13.2A9.8 9.8 0 0 0 12 2Z" 
-                  clipRule="evenodd"/>
-                </svg>
-                View code
+              <svg className="w-5 h-5  text-white" 
+              aria-hidden="true" 
+              xmlns="http://www.w3.org/2000/svg" 
+              fill="none" 
+              viewBox="0 0 24 24">
+              <path 
+              stroke="currentColor" 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              strokeWidth="2" 
+              d="M13.2 9.8a3.4 3.4 0 0 0-4.8 0L5 13.2A3.4 3.4 0 0 0 9.8 18l.3-.3m-.3-4.5a3.4 3.4 0 0 0 4.8 0L18 9.8A3.4 3.4 0 0 0 13.2 5l-1 1"/>
+            </svg>
+                More Detailed   
               </Button>
             </Link>
           </div>
         </ComponentDelay>    
+
+
+
+
+      <div className="flex sm:flex-col lg:flex-row lg:gap-10 sm:gap-3 w-full ">
+          <div className="w-24 sm:px-2">
+            <p className=" font-semibold text-gray-600 pt-1">
+              <ComponentDelay delay={11000}>
+                  <TypingEffect text="Deferred Project"/>
+              </ComponentDelay>
+            </p>
+          </div>
+          <span
+          className="w-[80%] lg:px-8 lg:text-lg font-normal sm:px-2 sm:w-full sm:text-md">
+            <TypingEffect text={wordsProject}/>
+          </span>
+        </div>
+
+        <div className="flex sm:flex-col lg:flex-row lg:gap-10 sm:gap-3 w-full ">
+          <div className="w-24 sm:px-2"/>
+          <div className="w-[80%] lg:px-8 lg:text-lg font-normal sm:px-2 sm:w-full sm:text-md">
+          <ComponentDelay delay={11000}>
+          <p className="font-medium text-md text-black pb-2">
+                  <TypingEffect text="Core Technology"/>
+          </p>
+          </ComponentDelay>
+           <ComponentDelay delay={11000}>
+            <div className="flex w-full gap-2 flex-wrap">
+            {wordsProejectTechStak.map((i) => (
+                  <Button className="cursor-default bg-white text-black" size="sm" key={i.name}>{i.name}</Button>
+                ))}
+            </div>
+           </ComponentDelay>
+          </div>
+        </div>
+
+
+        <ComponentDelay delay={11000}>
+          <div className="flex justify-center w-full pt-5 gap-3">
+            <Link href="https://words-gilt.vercel.app/signin" target="_blank">
+              <Button className=" bg-black text-white ">
+              <svg className="w-5 h-5  text-white" 
+              aria-hidden="true" 
+              xmlns="http://www.w3.org/2000/svg" 
+              fill="none" 
+              viewBox="0 0 24 24">
+              <path 
+              stroke="currentColor" 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              strokeWidth="2" 
+              d="M13.2 9.8a3.4 3.4 0 0 0-4.8 0L5 13.2A3.4 3.4 0 0 0 9.8 18l.3-.3m-.3-4.5a3.4 3.4 0 0 0 4.8 0L18 9.8A3.4 3.4 0 0 0 13.2 5l-1 1"/>
+            </svg>
+               Try It
+              </Button>
+            </Link>
+          </div>
+        </ComponentDelay> 
+        
     </div>
   );
 }

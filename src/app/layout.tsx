@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <NextUiProvider>
-          <main className="flex justify-center w-full h-[100dvh] light dark:dark">
+          <main className="flex justify-center w-full h-[100dvh] light">
             {children}
           </main>
         </NextUiProvider>
