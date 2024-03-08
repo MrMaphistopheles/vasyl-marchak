@@ -23,8 +23,9 @@
 body{
   print-color-adjust: exact;
   -webkit-print-color-adjust: exact;
-  background-color: #fff9da;
-  /* background-image: linear-gradient(
+ background-color: #f3dfc1; 
+/* background-color: rgb(238, 238, 238); */
+/*  background-image: linear-gradient(
   290deg,
   hsl(288deg 53% 93%) 0%,
   hsl(265deg 71% 94%) 4%,
@@ -50,7 +51,7 @@ body{
   hsl(245deg 93% 95%) 91%,
   hsl(265deg 71% 94%) 96%,
   hsl(288deg 53% 93%) 100%
-); */
+);  */
 }
 
 @media print {
