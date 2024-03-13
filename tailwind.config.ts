@@ -19,10 +19,11 @@ const config: Config = {
     extend: {
       animation: {
         tscale: "scale 1s linear infinite",
+        bouncing: "bubble 5s linear infinite"
       },
       keyframes: {
         scale: {
-          "0-50%": {
+          "0%": {
             transform: "scale(1)",
           },
           "50%": {
@@ -32,7 +33,25 @@ const config: Config = {
             transform: "scale(1)",
           },
         },
+
+      
+
+        bubble: {
+        "0%":  {
+            transform: "translateY(0) scale(1)",
+        },
+        "50%": {
+            transform: "translateY(-40%)  scale(1.3)",
+        },
+        "100%": {
+            transform: "translateY(0) scale(1)",
+        },
+
+        }
       },
+
+
+     
       
     },
   },

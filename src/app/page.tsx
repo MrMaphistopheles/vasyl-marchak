@@ -64,7 +64,7 @@ export default async function Home() {
 
   await delay(2000)
   return (
-    <div className="max-w-[50em] w-full flex flex-col items-center justify-start py-16 sm:px-3 lg:gap-5 sm:gap-3 overflow-scroll hide-scroll ">
+    <div className="max-w-[50em] w-full flex flex-col items-center justify-start py-16 sm:px-3 lg:gap-5 sm:gap-3 absolute mb-16">
 
         <div className="flex w-full lg:gap-10 sm:gap-4">
           <Avatar src="https://storage.googleapis.com/bonuslite1/avatar.jpeg" className="w-24 h-24"/>
@@ -73,14 +73,14 @@ export default async function Home() {
           <div className="flex flex-col items-start justify-between lg:pl-8 sm:pl-2 sm:w-[60%] lg:w-[70%]">
             <div>
             <p className="lg:text-md font-light text-gray-500 sm:text-sm">
-              <TypingEffect text="Lviv, Ukraine"/>
+                Lviv, Ukraine
             </p>
             <p className="lg:text-md font-light text-gray-500 sm:text-sm">
               <Link href="tel:+380639346667">
-              <TypingEffect text="+380639346667 "/>
+                +380639346667
               </Link>
               <Link href="mailto:basylmarchak@icloud.com">
-              <TypingEffect text="basylmarchak@icloud.com"/>
+                 basylmarchak@icloud.com
               </Link>
   {/*             <Link href=" https://vasylmarchak.com" target="_blank">
               <TypingEffect text=" https://vasylmarchak.com"/>
@@ -89,16 +89,15 @@ export default async function Home() {
              </p>
             </div>
             <span className="lg:text-3xl font-bold sm:text-xl">
-            <TypingEffect text="Vasyl Marchak, Web Developer"/>
-              </span>
+                Vasyl Marchak, Web Developer
+            </span>
           </div>
         </div>
 
         <div className="flex sm:flex-col lg:flex-row lg:gap-10 w-full">
           <div className="w-24"></div>
-          <span
-          className="w-[80%] lg:px-8  sm:px-2 text-lg font-normal sm:w-full sm:text-md">
-            <TypingEffect text={desc}/>
+          <span className="w-[80%] lg:px-8  sm:px-2 text-lg font-normal sm:w-full sm:text-md">
+              {desc}
           </span>
         </div>
 
@@ -106,34 +105,32 @@ export default async function Home() {
         <div className="flex sm:flex-col lg:flex-row lg:gap-10 sm:gap-3 w-full">
           <div className="w-24 sm:px-2">
             <p className="font-semibold text-gray-600 pt-1">
-              <ComponentDelay delay={11000}>
-                  <TypingEffect text="Details"/>
-              </ComponentDelay>
+                  Details
             </p>
           </div>
 
 
         <div className="flex lg:w-[30%] lg:px-8 sm:px-2 sm:w-full">
           <p className="text-lg font-light sm:text-md">
-            <TypingEffect text="Nationality"/>
+            Nationality
           </p>
           <p className="text-lg font-normal text-gray-500 sm:text-md">
-            <TypingEffect text="________"/>
+             ________
           </p>
           <p className="text-lg font-medium sm:text-md">
-            <TypingEffect text="Ukranian"/>
+              Ukranian
           </p>
         </div>
 
         <div className="flex lg:w-[50%] sm:px-2 lg:px-8 sm:w-full">
           <p className="text-lg font-light sm:text-md">
-            <TypingEffect text="Date of birth"/>
+              Date of birth
           </p>
           <p className="text-lg font-normal text-gray-500 sm:text-md">
-            <TypingEffect text="________"/>
+             ________
           </p>
           <p className="text-lg font-medium sm:text-md">
-            <TypingEffect text="05.01.2000"/>
+            05.01.2000
           </p>
         </div>
          
@@ -143,9 +140,7 @@ export default async function Home() {
         <div className="flex sm:flex-col lg:flex-row lg:gap-10 sm:gap-3 w-full sm:px-2">
           <div className="w-24">
             <p className=" font-semibold text-gray-600 pt-1">
-             <ComponentDelay delay={11000}>
-                  <TypingEffect text="Skils"/>
-              </ComponentDelay>
+              Skils
             </p>
           </div>
          
@@ -155,22 +150,12 @@ export default async function Home() {
 
               {skils.map((i) => (
 
-              <div className="flex gap-2" key={i.name}>
-                 <ComponentDelay delay={500}>
-                 <CircularProgress  
-                aria-label="Loading..."
-                value={i.score}
-                classNames={{
-                  svg: "w-6 h-6",
-                  indicator: "stroke-black",
-                  track: "stroke-black/10",
-                  value: "text-sm font-semibold text-black",
-                }}/>
-                 </ComponentDelay>
-             
-                <p className="text-lg font-medium sm:text-md">
-                <TypingEffect text={i.name}/>
-                </p>
+              <div className="flex gap-2" key={i.name}> 
+                <Button className="cursor-default bg-white text-black" size="sm" key={i.name}>
+                  {i.name}
+                </Button>
+               
+     
               </div>
               ))}
 
@@ -180,10 +165,8 @@ export default async function Home() {
 
         <div className="flex sm:flex-col lg:flex-row lg:gap-10 sm:gap-3 w-full sm:px-2">
           <div className="w-24">
-            <p className=" font-semibold text-gray-600 pt-1">
-             <ComponentDelay delay={11000}>
-                  <TypingEffect text="Language"/>
-              </ComponentDelay>       
+            <p className=" font-semibold text-gray-600 pt-1">            
+                Language
             </p>
           </div>
          
@@ -194,60 +177,42 @@ export default async function Home() {
               {languages.map((i) => (
 
               <div className="flex gap-2" key={i.name}>
-                <ComponentDelay delay={500}>
-                <CircularProgress  
-                aria-label="Loading..."
-                value={i.score}
-                classNames={{
-                  svg: "w-6 h-6",
-                  indicator: "stroke-black",
-                  track: "stroke-black/10",
-                  value: "text-sm font-semibold text-black",
-                }}/>
-                </ComponentDelay>
-              
                 <p className="lg:text-lg font-medium sm:text-md">
-                <TypingEffect text={i.name}/>
+                  {i.name}
                 </p>
                 <p className="lg:text-lg font-light sm:text-md">
-                <TypingEffect text={i.level}/>
+                  {i.level}
                 </p>
               </div>
               ))}
-
              </div>
-
         </div>
 
         <div className="flex sm:flex-col lg:flex-row lg:gap-10 sm:gap-3 w-full ">
           <div className="w-24 sm:px-2">
             <p className=" font-semibold text-gray-600 pt-1">
-              <ComponentDelay delay={11000}>
-                  <TypingEffect text="Hobbies"/>
-              </ComponentDelay>
+              Hobbies
             </p>
           </div>
-          <span
-          className="w-[80%] lg:px-8 lg:text-lg font-normal sm:px-2 sm:w-full sm:text-md">
-            <TypingEffect text={hobbies}/>
+          <span className="w-[80%] lg:px-8 lg:text-lg font-normal sm:px-2 sm:w-full sm:text-md">
+            {hobbies}
           </span>
         </div>
 
-        <ComponentDelay delay={11000}>
+
             <Download/>
-        </ComponentDelay>
+
 
        <div className="flex sm:flex-col lg:flex-row lg:gap-10 sm:gap-3 w-full ">
           <div className="w-24 sm:px-2">
             <p className=" font-semibold text-gray-600 pt-1">
-              <ComponentDelay delay={11000}>
-                  <TypingEffect text="Current Project"/>
-              </ComponentDelay>
+
+               Current Project
+
             </p>
           </div>
-          <span
-          className="w-[80%] lg:px-8 lg:text-lg font-normal sm:px-2 sm:w-full sm:text-md">
-            <TypingEffect text={projectDesc}/>
+          <span className="w-[80%] lg:px-8 lg:text-lg font-normal sm:px-2 sm:w-full sm:text-md">
+              {projectDesc}
           </span>
         </div>
         
@@ -255,23 +220,23 @@ export default async function Home() {
         <div className="flex sm:flex-col lg:flex-row lg:gap-10 sm:gap-3 w-full ">
           <div className="w-24 sm:px-2"/>
           <div className="w-[80%] lg:px-8 lg:text-lg font-normal sm:px-2 sm:w-full sm:text-md">
-          <ComponentDelay delay={11000}>
+          
           <p className="font-medium text-md text-black pb-2">
-                  <TypingEffect text="Core Technology"/>
+                Core Technology
           </p>
-          </ComponentDelay>
-           <ComponentDelay delay={11000}>
+ 
+      
             <div className="flex w-full gap-2 flex-wrap">
             {projectTechStak.map((i) => (
                   <Button className="cursor-default bg-white text-black" size="sm" key={i.name}>{i.name}</Button>
                 ))}
             </div>
-           </ComponentDelay>
+
           </div>
         </div>
 
 
-        <ComponentDelay delay={11000}>
+
           <div className="flex justify-center w-full pt-5 gap-3">
             <Link href="https://lite-theta.vercel.app/about" target="_blank">
               <Button className=" bg-black text-white ">
@@ -291,7 +256,7 @@ export default async function Home() {
               </Button>
             </Link>
           </div>
-        </ComponentDelay>    
+
 
 
 
@@ -299,37 +264,35 @@ export default async function Home() {
       <div className="flex sm:flex-col lg:flex-row lg:gap-10 sm:gap-3 w-full ">
           <div className="w-24 sm:px-2">
             <p className=" font-semibold text-gray-600 pt-1">
-              <ComponentDelay delay={11000}>
-                  <TypingEffect text="Deferred Project"/>
-              </ComponentDelay>
+         
+                 Deferred Project
+      
             </p>
           </div>
-          <span
-          className="w-[80%] lg:px-8 lg:text-lg font-normal sm:px-2 sm:w-full sm:text-md">
-            <TypingEffect text={wordsProject}/>
+          <span className="w-[80%] lg:px-8 lg:text-lg font-normal sm:px-2 sm:w-full sm:text-md">
+            {wordsProject}
           </span>
         </div>
 
         <div className="flex sm:flex-col lg:flex-row lg:gap-10 sm:gap-3 w-full ">
           <div className="w-24 sm:px-2"/>
           <div className="w-[80%] lg:px-8 lg:text-lg font-normal sm:px-2 sm:w-full sm:text-md">
-          <ComponentDelay delay={11000}>
+
           <p className="font-medium text-md text-black pb-2">
-                  <TypingEffect text="Core Technology"/>
+               Core Technology
           </p>
-          </ComponentDelay>
-           <ComponentDelay delay={11000}>
+
+    
             <div className="flex w-full gap-2 flex-wrap">
             {wordsProejectTechStak.map((i) => (
                   <Button className="cursor-default bg-white text-black" size="sm" key={i.name}>{i.name}</Button>
                 ))}
             </div>
-           </ComponentDelay>
           </div>
         </div>
 
 
-        <ComponentDelay delay={11000}>
+
           <div className="flex justify-center w-full pt-5 gap-3">
             <Link href="https://words-gilt.vercel.app/signin" target="_blank">
               <Button className=" bg-black text-white ">
@@ -349,7 +312,7 @@ export default async function Home() {
               </Button>
             </Link>
           </div>
-        </ComponentDelay> 
+
         
     </div>
   );

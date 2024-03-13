@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { NextUiProvider } from './_provider/NextUiProvider';
+import Bubbles from "./_component/Bubbles";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,9 +20,14 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <NextUiProvider>
-          <main className="flex justify-center w-full h-[100dvh] light">
-            {children}
-          </main>
+      
+        <Bubbles bubbles={30}>
+         
+        <main className="flex justify-center light overflow-y-scroll hide-scroll glass h-[100dvh]">
+              {children}
+        </main>
+          </Bubbles>
+     
         </NextUiProvider>
       </body>
     </html>

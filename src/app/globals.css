@@ -23,35 +23,10 @@
 body{
   print-color-adjust: exact;
   -webkit-print-color-adjust: exact;
- background-color: #f3dfc1; 
-/* background-color: rgb(238, 238, 238); */
-/*  background-image: linear-gradient(
-  290deg,
-  hsl(288deg 53% 93%) 0%,
-  hsl(265deg 71% 94%) 4%,
-  hsl(245deg 93% 95%) 9%,
-  hsl(227deg 100% 95%) 13%,
-  hsl(215deg 100% 94%) 17%,
-  hsl(206deg 100% 93%) 22%,
-  hsl(200deg 100% 92%) 26%,
-  hsl(196deg 100% 91%) 30%,
-  hsl(193deg 100% 91%) 35%,
-  hsl(193deg 100% 91%) 39%,
-  hsl(193deg 100% 91%) 43%,
-  hsl(193deg 100% 91%) 48%,
-  hsl(193deg 100% 91%) 52%,
-  hsl(193deg 100% 91%) 57%,
-  hsl(193deg 100% 91%) 61%,
-  hsl(193deg 100% 91%) 65%,
-  hsl(196deg 100% 91%) 70%,
-  hsl(200deg 100% 92%) 74%,
-  hsl(206deg 100% 93%) 78%,
-  hsl(215deg 100% 94%) 83%,
-  hsl(227deg 100% 95%) 87%,
-  hsl(245deg 93% 95%) 91%,
-  hsl(265deg 71% 94%) 96%,
-  hsl(288deg 53% 93%) 100%
-);  */
+  background-color: white; 
+  height: 100dvh;
+  width: 100dvw;
+
 }
 
 @media print {
@@ -90,5 +65,12 @@ body{
     display: none;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.49);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.6px);
+    -webkit-backdrop-filter: blur(9.6px);
   }
 }
