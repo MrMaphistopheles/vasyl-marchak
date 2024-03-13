@@ -9,7 +9,12 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Vasyl Marchak",
   description: "Vasyl Marchak CV",
-  
+  icons:[
+    {
+      rel: "icon",
+      url: "https://storage.googleapis.com/bonuslite1/vasyl_marchak_favicon.ico",
+    },
+  ],
     openGraph: {
       type: "website",
       url: 'https://vasylmarchak.com',
