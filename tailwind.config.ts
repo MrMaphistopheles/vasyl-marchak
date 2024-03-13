@@ -38,13 +38,13 @@ const config: Config = {
 
         bubble: {
         "0%":  {
-            transform: "translateY(0) scale(1)",
+            transform: "translateY(0) scale(0.8)",
         },
         "50%": {
             transform: "translateY(-40%)  scale(1.3)",
         },
         "100%": {
-            transform: "translateY(0) scale(1)",
+            transform: "translateY(0) scale(0.8)",
         },
 
         }

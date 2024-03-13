@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <NextUiProvider>
       
-        <Bubbles bubbles={30}>
+        <Bubbles>
          
         <main className="flex justify-center light overflow-y-scroll hide-scroll glass h-[100dvh]">
               {children}

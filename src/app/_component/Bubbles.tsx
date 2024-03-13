@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 
-export default function Bubbles({children, bubbles}:{children: React.ReactNode, bubbles: number}) {
+export default function Bubbles({children}:{children: React.ReactNode}) {
+
 
     const [bubblesArr, setBubblesArr] = useState< { id: number, x: number, y: number }[]>([]);
  
@@ -10,6 +11,16 @@ export default function Bubbles({children, bubbles}:{children: React.ReactNode, 
     
     useEffect(() => {
 
+
+        let bubbles = 5
+
+        const width = document.body.clientWidth
+
+        if (width < 400) {
+
+            bubbles = 3
+            
+        }
  
 
             let newBubbles = []
@@ -17,8 +28,8 @@ export default function Bubbles({children, bubbles}:{children: React.ReactNode, 
             for (let i = 0; i < bubbles; i++) {
                 newBubbles.push({
                     id: i,
-                    x: Math.round(Math.random() * 85),
-                    y: Math.round(Math.random() * 85),
+                    x: Math.round(Math.random() * 60),
+                    y: Math.round(Math.random() * 65),
                  })
                 
             }
@@ -26,7 +37,7 @@ export default function Bubbles({children, bubbles}:{children: React.ReactNode, 
 
 
    
-    }, [bubbles]);
+    }, []);
     
     console.log(bubblesArr);
     

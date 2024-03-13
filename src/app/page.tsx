@@ -75,10 +75,14 @@ export default async function Home() {
             <p className="lg:text-md font-light text-gray-500 sm:text-sm">
                 Lviv, Ukraine
             </p>
+
             <p className="lg:text-md font-light text-gray-500 sm:text-sm">
               <Link href="tel:+380639346667">
                 +380639346667
               </Link>
+            </p>
+
+              <p className="lg:text-md font-light text-gray-500 sm:text-sm">
               <Link href="mailto:basylmarchak@icloud.com">
                  basylmarchak@icloud.com
               </Link>
