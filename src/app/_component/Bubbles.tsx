@@ -16,7 +16,7 @@ export default function Bubbles({children}:{children: React.ReactNode}) {
 
         const width = document.body.clientWidth
 
-        if (width < 400) {
+        if (width < 500) {
 
             bubbles = 3
             
@@ -29,7 +29,7 @@ export default function Bubbles({children}:{children: React.ReactNode}) {
                 newBubbles.push({
                     id: i,
                     x: Math.round(Math.random() * 60),
-                    y: Math.round(Math.random() * 65),
+                    y: Math.round(Math.random() * 68),
                  })
                 
             }

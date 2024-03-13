@@ -64,7 +64,7 @@ export default async function Home() {
 
   await delay(2000)
   return (
-    <div className="max-w-[50em] w-full flex flex-col items-center justify-start py-16 sm:px-3 lg:gap-5 sm:gap-3 absolute mb-16">
+    <div className="max-w-[50em] w-full flex flex-col items-center justify-start py-16 sm:px-3 lg:gap-5 sm:gap-3">
 
         <div className="flex w-full lg:gap-10 sm:gap-4">
           <Avatar src="https://storage.googleapis.com/bonuslite1/avatar.jpeg" className="w-24 h-24"/>
@@ -297,7 +297,7 @@ export default async function Home() {
 
 
 
-          <div className="flex justify-center w-full pt-5 gap-3">
+          <div className="flex justify-center w-full pt-5 pb-16 gap-3">
             <Link href="https://words-gilt.vercel.app/signin" target="_blank">
               <Button className=" bg-black text-white ">
               <svg className="w-5 h-5  text-white" 
