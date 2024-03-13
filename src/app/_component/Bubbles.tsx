@@ -12,7 +12,7 @@ export default function Bubbles({children}:{children: React.ReactNode}) {
     useEffect(() => {
 
 
-        let bubbles = 5
+        let bubbles = 7
 
         const width = document.body.clientWidth
 

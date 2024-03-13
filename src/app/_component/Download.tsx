@@ -10,7 +10,7 @@ export default function Download() {
 
   return (
     <div className="p-4"> 
-    <Button className="bg-black text-white" onClick={() => window.open('https://storage.googleapis.com/bonuslite1/Vasyl_Marchak_WebDev_CV.pdf')}>
+    <Button className="bg-black text-white" onClick={() => window.open('https://storage.googleapis.com/bonuslite1/Vasyl%20Marchak_CV.pdf')}>
     <svg className=" w-5 h-5 text-white" 
     aria-hidden="true" 
     xmlns="http://www.w3.org/2000/svg" 

@@ -1,8 +1,7 @@
-import { Avatar, Button, CircularProgress } from "@nextui-org/react";
-import TypingEffect from './_component/Desc';
-import { ComponentDelay } from './_component/TextDelay';
+import { Avatar, Button, } from "@nextui-org/react";
 import Download from './_component/Download';
 import Link from "next/link";
+import GlassButton from "./_component/GlassButton";
 
 
 
@@ -56,13 +55,11 @@ const languages = [
   {name: "English", score: 50, level: "Good working knowledge"},
 ]
 
-const delay = async (ms: number) => {
-  return new Promise((resolve) => setTimeout(resolve, ms))
-}
+
 
 export default async function Home() {
 
-  await delay(2000)
+
   return (
     <div className="max-w-[50em] w-full flex flex-col items-center justify-start py-16 sm:px-3 lg:gap-5 sm:gap-3">
 
@@ -71,26 +68,26 @@ export default async function Home() {
 
 
           <div className="flex flex-col items-start justify-between lg:pl-8 sm:pl-2 sm:w-[60%] lg:w-[70%]">
-            <div>
+          <div>
             <p className="lg:text-md font-light text-gray-500 sm:text-sm">
                 Lviv, Ukraine
             </p>
 
-            <p className="lg:text-md font-light text-gray-500 sm:text-sm">
-              <Link href="tel:+380639346667">
-                +380639346667
-              </Link>
-            </p>
 
-              <p className="lg:text-md font-light text-gray-500 sm:text-sm">
-              <Link href="mailto:basylmarchak@icloud.com">
-                 basylmarchak@icloud.com
+              <Link href="tel:+380639346667">
+                <p className="lg:text-md font-light text-gray-500 sm:text-sm">
+                +380639346667
+                </p>
               </Link>
-  {/*             <Link href=" https://vasylmarchak.com" target="_blank">
-              <TypingEffect text=" https://vasylmarchak.com"/>
-              </Link> */}
-           
-             </p>
+
+
+       
+              <Link href="mailto:basylmarchak@icloud.com">
+                <p className="lg:text-md font-light text-gray-500 sm:text-sm">
+                basylmarchak@icloud.com
+                </p>
+              </Link>
+
             </div>
             <span className="lg:text-3xl font-bold sm:text-xl">
                 Vasyl Marchak, Web Developer
@@ -155,9 +152,7 @@ export default async function Home() {
               {skils.map((i) => (
 
               <div className="flex gap-2" key={i.name}> 
-                <Button className="cursor-default bg-white text-black" size="sm" key={i.name}>
-                  {i.name}
-                </Button>
+               <GlassButton name={i.name} key={i.name}/>
                
      
               </div>
@@ -204,7 +199,7 @@ export default async function Home() {
         </div>
 
 
-            <Download/>
+            <Download/> 
 
 
        <div className="flex sm:flex-col lg:flex-row lg:gap-10 sm:gap-3 w-full ">
@@ -232,7 +227,7 @@ export default async function Home() {
       
             <div className="flex w-full gap-2 flex-wrap">
             {projectTechStak.map((i) => (
-                  <Button className="cursor-default bg-white text-black" size="sm" key={i.name}>{i.name}</Button>
+                  <GlassButton name={i.name} key={i.name}/>
                 ))}
             </div>
 
@@ -240,8 +235,28 @@ export default async function Home() {
         </div>
 
 
+{/*         <div className="flex justify-center w-full pt-5 gap-3">
+            <Link href="https://vasylmarchak.com" target="_blank">
+              <Button className=" bg-black text-white ">
+              <svg className="w-5 h-5  text-white" 
+              aria-hidden="true" 
+              xmlns="http://www.w3.org/2000/svg" 
+              fill="none" 
+              viewBox="0 0 24 24">
+              <path 
+              stroke="currentColor" 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              strokeWidth="2" 
+              d="M13.2 9.8a3.4 3.4 0 0 0-4.8 0L5 13.2A3.4 3.4 0 0 0 9.8 18l.3-.3m-.3-4.5a3.4 3.4 0 0 0 4.8 0L18 9.8A3.4 3.4 0 0 0 13.2 5l-1 1"/>
+            </svg>
+                More Detailed   
+              </Button>
+            </Link>
+          </div> */}
 
-          <div className="flex justify-center w-full pt-5 gap-3">
+
+        <div className="flex justify-center w-full pt-5 gap-3">
             <Link href="https://lite-theta.vercel.app/about" target="_blank">
               <Button className=" bg-black text-white ">
               <svg className="w-5 h-5  text-white" 
@@ -259,7 +274,7 @@ export default async function Home() {
                 More Detailed   
               </Button>
             </Link>
-          </div>
+          </div> 
 
 
 
@@ -289,7 +304,7 @@ export default async function Home() {
     
             <div className="flex w-full gap-2 flex-wrap">
             {wordsProejectTechStak.map((i) => (
-                  <Button className="cursor-default bg-white text-black" size="sm" key={i.name}>{i.name}</Button>
+                  <GlassButton key={i.name} name={i.name}/>
                 ))}
             </div>
           </div>
@@ -315,7 +330,7 @@ export default async function Home() {
                Try It
               </Button>
             </Link>
-          </div>
+          </div> 
 
         
     </div>
