@@ -9,7 +9,38 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Vasyl Marchak",
   description: "Vasyl Marchak CV",
+  
+    openGraph: {
+      type: "website",
+      url: 'https://vasylmarchak.com',
+      images: [
+        {
+          url: 'https://storage.googleapis.com/bonuslite1/avatar.jpeg',
+          width: 800,
+          height: 600,
+        },
+        {
+          url: 'https://storage.googleapis.com/bonuslite1/avatar.jpeg',
+          width: 1800,
+          height: 1600,
+          alt: 'Vasyl Marchak',
+        },
+      ],
+      siteName: "Vasyl Marchak",
+      title: "Vasyl Marchak",
+      description: "Vasyl Marchak CV",
+      locale: 'en_US',
+    },
+    twitter: {
+      card: "summary",
+      title: "Vasyl Marchak",
+      description: "Vasyl Marchak CV",
+      images: ['https://storage.googleapis.com/bonuslite1/avatar.jpeg'],
+    },
 };
+
+
+
 
 export default function RootLayout({
   children,
